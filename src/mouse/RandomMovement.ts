@@ -38,7 +38,7 @@ class RandomMovement {
     endTime.setSeconds(endTime.getSeconds() + secondsToRun);
      
     // check date and see if we are ready to stop
-    while (new Date() < endTime) {
+    while (new Date() < endTime || secondsToRun === 0) {
       // pause based on given interval
       await this.sleep(secondsToMove);
 
